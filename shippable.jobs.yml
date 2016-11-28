@@ -5,6 +5,7 @@ jobs:
   - name: release1
     type: release
     steps:
+      - IN: tpdeploy1
       - IN: version
       - TASK: managed
         bump: beta
@@ -21,7 +22,6 @@ jobs:
     type: deploy
     steps:
       - IN: manifest1
-      - IN: release1
       - IN: tripubcluster
       
   - name: runsh
