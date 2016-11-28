@@ -10,12 +10,12 @@ jobs:
         bump: beta
       - IN: tg3
      flags:
-      - release_allpl
+      - release1
       
   - name: manifest1
     type: manifest
     steps:
-      - IN: allpl-image1
+      - IN: image1
         #versionNumber: 1000
       - IN: tg1
       
@@ -23,6 +23,7 @@ jobs:
     type: deploy
     steps:
       - IN: manifest1
+      - IN: release1
       - IN: tripubcluster
       
   - name: runsh1
