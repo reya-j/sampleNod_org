@@ -9,9 +9,7 @@ jobs:
       - TASK: managed
         bump: beta
       - IN: tg3
-     flags:
-      - release1
-      
+         
   - name: manifest1
     type: manifest
     steps:
