@@ -1,0 +1,34 @@
+jobs:
+
+#RELEASE
+
+  - name: release1
+    type: release
+    steps:
+      - IN: version
+      - TASK: managed
+        bump: beta
+      - IN: tg3
+     flags:
+      - release_allpl
+      
+  - name: manifest1
+    type: manifest
+    steps:
+      - IN: allpl-image1
+        #versionNumber: 1000
+      - IN: tg1
+      
+  - name: tpdeploy1
+    type: deploy
+    steps:
+      - IN: manifest1
+      - IN: tripubcluster
+      
+  - name: runsh1
+    type: runSh
+    steps:
+      - IN: sample-script
+      - IN: tg2
+      - TASK:
+        - script: ls
