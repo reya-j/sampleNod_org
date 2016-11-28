@@ -2,15 +2,6 @@ jobs:
 
 #RELEASE
 
-  - name: release1
-    type: release
-    steps:
-      - IN: tpdeploy1
-      - IN: version
-      - TASK: managed
-        bump: beta
-      - IN: tg3
-         
   - name: manifest1
     type: manifest
     steps:
@@ -23,6 +14,15 @@ jobs:
     steps:
       - IN: manifest1
       - IN: tripubcluster
+      
+  - name: release1
+    type: release
+    steps:      
+      - IN: version
+      - IN: tpdeploy1
+      - TASK: managed
+        bump: beta
+         
       
   - name: runsh
     type: runSh
