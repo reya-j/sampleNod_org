@@ -31,3 +31,4 @@ jobs:
       - IN: tg2
       - TASK:
         - script: ls
+        - script: sleep 3m
