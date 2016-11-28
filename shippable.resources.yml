@@ -1,0 +1,8 @@
+resources:
+  - name: image1
+    type: image
+    integration: ship4-docker
+    pointer:
+      sourceName: "shippabledocker/pipelinev2"
+    seed:
+      versionName: "deploy.1"
