@@ -20,3 +20,8 @@ resources:
     pointer:
       sourceName: "rc-testorg/sampleNod_org"
       branch: "master"
+
+  - name: version
+    type: version
+    seed:
+      versionName: "1.3.123-beta"
