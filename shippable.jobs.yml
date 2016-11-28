@@ -26,7 +26,7 @@ jobs:
       - IN: release1
       - IN: tripubcluster
       
-  - name: runsh1
+  - name: runsh
     type: runSh
     steps:
       - IN: sample-script
