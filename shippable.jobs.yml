@@ -9,19 +9,19 @@ jobs:
         #versionNumber: 1000
       - IN: tg1
       
-  - name: tpdeploy1
-    type: deploy
-    steps:
-      - IN: manifest1
-      - IN: tripubcluster
+ # - name: tpdeploy1
+ #   type: deploy
+ #   steps:
+ #     - IN: manifest1
+ #     - IN: tripubcluster
       
-  - name: release1
-    type: release
-    steps:      
-      - IN: version
-      - IN: tpdeploy1
-      - TASK: managed
-        bump: beta
+ # - name: release1
+ #   type: release
+ #   steps:      
+ #     - IN: version
+ #     - IN: tpdeploy1
+ #     - TASK: managed
+ #       bump: beta
          
       
   - name: runsh
