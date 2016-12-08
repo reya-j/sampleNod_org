@@ -7,12 +7,12 @@ resources:
     seed:
       versionName: "deploy.1"
       
-  - name: tripubcluster
-    type: cluster
-    integration: plv2-tripub
-    pointer:
-      sourceName: "default" # we can give anything it deploy instances based on region not by cluster name
-      region: "us-east-2"
+ # - name: tripubcluster
+ #   type: cluster
+ #   integration: plv2-tripub
+ #   pointer:
+ #     sourceName: "default" # we can give anything it deploy instances based on region not by cluster name
+ #     region: "us-east-2"
 
   - name: sample-script
     type: gitRepo
