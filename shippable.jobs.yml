@@ -2,7 +2,7 @@ jobs:
 
 #RELEASE
 
-  - name: manifest1
+  - name: manifest
     type: manifest
     steps:
       - IN: image1
